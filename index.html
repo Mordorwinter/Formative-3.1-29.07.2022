@@ -5,39 +5,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- google styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- native style  -->
     <link rel="stylesheet" href="style/style.css">
     <title>31.07 API Pagination</title>
 </head>
 
 <body>
-    <header>
+    <!-- nav start  -->
+    <nav class="nav ">
+        <div class="nav_main wrapper_1">
+            <div class="nav_main_left">
+                <div class="nav_main_menu"><span class="material-symbols-outlined">
+                        menu
+                    </span></div>
+                <div class="nav_main_logo">
+                    <a href="#">
+                        <p><span class="clr_red">nws</span>now</p>
+                    </a>
+                </div>
+                <div class="nav_main_items">
+                    <ul>
+                        <li><a href="#">lang(EN)</a></li>
+                        <li><a href="#">New Zealand</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav_main_links">
+                <ul>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">search</a></li>
+                    <li><a href="#">subscribe</a></li>
+                    <li><a href="#">login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav_secondary wrapper_1">
+            <div class="nav_secondary_links">
+                <ul>
+                    <li><a href="#">world</a></li>
+                    <li><a href="#">buisness</a></li>
+                    <li><a href="#">economics</a></li>
+                    <li><a href="#">science</a></li>
+                    <li><a href="#">technology</a></li>
+                    <li><a href="#">art</a></li>
+                    <li><a href="#">environment</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">more</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav start  -->
 
-        <h1> News API</h1>
-    </header>
+    <!-- landingpage start  -->
+    <section class="landingpage">
 
-    <main>
+        <!-- swiper start  -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- swiper end  -->
+
+        <!-- landingpage line start -->
+        <div class="landingpage_line"></div>
+        <!-- landingpage line end -->
+
+        <!-- landingpage logo start  -->
+        <div class="landingpage_logo">
+            <p><span class="clr_red">Nws</span> </p>
+            <p>Now</p>
+        </div>
+        <!-- landingpage logo end  -->
+
+    </section>
+    <!-- landing page end  -->
+
+    <main class="wrapper_2">
         <div id="filter-toolbar" class="filter_toolbar">
             <input type="text" placeholder="search" name="search" id="search" class="search">
             <button id="button">search</button>
         </div>
         <div id="list" class="list">
+
+
         </div>
         <div id="pagination" class="pagenumbers">
         </div>
 
     </main>
 
-
     <!-- ------------script------------  -->
-    <!-- fontawesome  -->
-    <script src="https://kit.fontawesome.com/4b2d68b43d.js" crossorigin="anonymous"></script>
 
+    <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+    <!-- local  -->
+    <script src="js/swiper.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

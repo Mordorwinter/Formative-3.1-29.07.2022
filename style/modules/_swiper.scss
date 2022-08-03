@@ -1,0 +1,69 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    background: blue;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    h6 {
+        font-size: 25px;
+        font-family: $inter;
+        font-weight: 500;
+        text-transform: capitalize;
+        position: absolute;
+        top: 130px;
+        left: 90px;
+        color: $white;
+        z-index: 2;
+        text-shadow: 0px 1px 3px #000000;
+
+    }
+
+    p {
+        font-size: 40px;
+        font-family: $jakarta;
+        font-weight: 600;
+        position: absolute;
+        top: 220px;
+        left: 90px;
+        color: $white;
+        z-index: 2;
+        width: 48%;
+        text-shadow: 0px 1px 3px #000000;
+
+    }
+}
+
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: .9;
+}
+
+.swiper-pagination-bullet {
+    background-color: $white;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $red;
+}

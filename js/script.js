@@ -1,28 +1,3 @@
-// const list_items = [
-//     "item 1",
-//     "item 2",
-//     "item 3",
-//     "item 4",
-//     "item 5",
-//     "item 6",
-//     "item 7",
-//     "item 8",
-//     "item 9",
-//     "item 10",
-//     "item 11",
-//     "item 12",
-//     "item 13",
-//     "item 14",
-//     "item 15",
-//     "item 16",
-//     "item 17",
-//     "item 18",
-//     "item 19",
-//     "item 20",
-//     "item 21",
-//     "item 22",
-//     "item 23"
-// ];
 
 // --------------------------------------------API variables 
 const apiKey = "&apiKey=1423e6422183485b87593f339a8afa9e";
@@ -30,7 +5,7 @@ const endpointURL = "https://newsapi.org/v2/everything?";
 const parameters = "q=";
 const sources = "sources=";
 const domains = "domains=";
-
+const topHeadline = "top-headlines?"
 const pageSize = "&pageSize=60";
 const page = "&page=1"
 // ---------------------------------------------- variables
@@ -43,7 +18,7 @@ const searchBtn = document.getElementById('button')
 // the page 
 let current_page = 1;
 // how many items 
-let rows = 10;
+let rows = 9;
 
 // -------------------------------- this displays the items 
 function DisplayList(items, wrapper, rows_per_page, page) {
@@ -53,7 +28,7 @@ function DisplayList(items, wrapper, rows_per_page, page) {
     // page = current_page 
     wrapper.innerHTML = "";
     page--;
-    console.log(items);
+    // console.log(items);
 
     // this math equation calculates amount of listed objects and rounds up. 
 
@@ -67,12 +42,51 @@ function DisplayList(items, wrapper, rows_per_page, page) {
         // this creates the div.item and fills it with item_element 
         let item_element = document.createElement('div');
         item_element.classList.add('item');
+        // this will loop through array to find nulls and not display the authors 
+        authorNull = () => {
+            if (item.author == null) {
+                return "";
+            } else {
+                return item.author;
+            }
+        }
+        // display all info
         item_element.innerHTML = `
-        <p>${item.title}</p>
-        <p>${item.author}</p>
-        <p><b>${item.source.name}</b></p>
+                <img src="${item.urlToImage}" alt="peopleontraing.jpg">
+                <div class="item_title">
+                    <p>${item.title}</p>
+                 </div>
+                 <div class="item_description">
+                     <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                 </div>
+                 <div class="item_author">
+                     <p>${authorNull(item)}</p>
+                 </div>
+                 <div class="item_source">
+                     <p>${item.source.name}</p>
+                 </div>
+                 <div class="item_a">
+                     <p>read more . . .</p>
+                 </div>
         `;
-
+        // <img src="media/people_on_train.jpg" alt="peopleontraing.jpg">
+        //         <div class="item_title">
+        //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        //         </div>
+        //         <div class="item_description">
+        //             <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        //                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        //         </div>
+        //         <div class="item_author">
+        //             <p>tom baker</p>
+        //         </div>
+        //         <div class="item_source">
+        //             <p>BBC News</p>
+        //         </div>
+        //         <div class="item_a">
+        //             <p>read more . . .</p>
+        //         </div>
         wrapper.appendChild(item_element);
     }
 }
@@ -111,6 +125,9 @@ function paginationButton(page, items) {
 
     return button;
 }
+
+
+
 // --------------------------------------------------- API Ajax 
 $.ajax({
     type: "GET",
@@ -120,11 +137,13 @@ $.ajax({
         // push API data into these functions 
         DisplayList(data.articles, list_element, rows, current_page);
         setupPagination(data.articles, pagination_element, rows);
+
     },
     error: (error) => {
         console.log(error)
     }
 })
+
 
 // this is for search functionality
 searchBtn.onclick = () => {
@@ -146,7 +165,9 @@ searchBtn.onclick = () => {
     })
 }
 
-// enter on keypress 
+//--------------------------------- misc script 
+
+//--------------------------------- enter on keypress 
 
 searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
