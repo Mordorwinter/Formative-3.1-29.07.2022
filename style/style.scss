@@ -200,10 +200,55 @@ body {
 
 
 // --------------------------------------- display
-main {
+.search_display {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .search_title {
+    @include flex-row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 50px 15px 15px 15px;
+
+    h1 {
+      font-size: 60px;
+      font-family: $inter;
+    }
+  }
+
+  .filter_toolbar {
+    width: 100%;
+    padding: 15px;
+
+    input[type=text] {
+      border: none;
+      padding: 10px;
+      width: 450px;
+      height: 60px;
+      font-family: $inter;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 500;
+
+
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      background-color: $red;
+      color: $white;
+      height: 60px;
+      width: 120px;
+      cursor: pointer;
+      font-family: $inter;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 500;
+
+    }
+  }
 
   .list {
     width: 100%;
@@ -222,12 +267,12 @@ main {
       .item_title {
         font-size: 15px;
         font-weight: 600;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
 
       }
 
       .item_description {
-        padding-bottom: 3px;
+        padding-bottom: 8px;
 
         p {
           font-size: 12px;
@@ -237,11 +282,11 @@ main {
       }
 
       .item_author {
-        padding-bottom: 3px;
+        padding-bottom: 8px;
 
         p {
-          font-size: 12px;
-          font-weight: 600;
+          font-size: 10px;
+          font-weight: 800;
           text-transform: capitalize;
         }
       }
@@ -304,12 +349,12 @@ main {
     outline: none;
     cursor: pointer;
 
-    background-color: #44AAEE;
+    background-color: $white;
 
     margin: 5px;
     transition: all ease 0.4s;
 
-    color: #FFF;
+    color: $black;
     font-size: 18px;
     text-shadow: 0px 0px 4px rgba (0, 0, 0, 0.2);
     box-shadow: 0px 0px 4px rgba (0, 0, 0, 0.2);
@@ -317,12 +362,13 @@ main {
   }
 
   button:hover {
-    background-color: #44EEAA;
+    background-color: $red;
+    color: $white;
   }
 
   .active {
-    background-color: #44EEAA;
+    background-color: $red;
     box-shadow: inset 0px 0px 4px rgba (0, 0, 0, 0.2);
-
+    color: white;
   }
 }

@@ -28,7 +28,7 @@ function DisplayList(items, wrapper, rows_per_page, page) {
     // page = current_page 
     wrapper.innerHTML = "";
     page--;
-    // console.log(items);
+    console.log(items);
 
     // this math equation calculates amount of listed objects and rounds up. 
 
@@ -50,6 +50,16 @@ function DisplayList(items, wrapper, rows_per_page, page) {
                 return item.author;
             }
         }
+
+        truncateString = (item, num) => {
+            let shortDescription = item.description;
+            if (shortDescription.length > 110) {
+                return shortDescription.slice(0, num) + "...";
+            } else {
+                return shortDescription;
+            }
+        }
+
         // display all info
         item_element.innerHTML = `
                 <img src="${item.urlToImage}" alt="peopleontraing.jpg">
@@ -57,8 +67,7 @@ function DisplayList(items, wrapper, rows_per_page, page) {
                     <p>${item.title}</p>
                  </div>
                  <div class="item_description">
-                     <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                     <p>${truncateString(item, 100)}</p>
                  </div>
                  <div class="item_author">
                      <p>${authorNull(item)}</p>
@@ -70,23 +79,7 @@ function DisplayList(items, wrapper, rows_per_page, page) {
                      <p>read more . . .</p>
                  </div>
         `;
-        // <img src="media/people_on_train.jpg" alt="peopleontraing.jpg">
-        //         <div class="item_title">
-        //             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        //         </div>
-        //         <div class="item_description">
-        //             <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        //                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        //         </div>
-        //         <div class="item_author">
-        //             <p>tom baker</p>
-        //         </div>
-        //         <div class="item_source">
-        //             <p>BBC News</p>
-        //         </div>
-        //         <div class="item_a">
-        //             <p>read more . . .</p>
-        //         </div>
+
         wrapper.appendChild(item_element);
     }
 }

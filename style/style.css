@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 .wrapper_1 {
@@ -324,7 +325,7 @@ body {
   color: #EB1212;
 }
 
-main {
+.search_display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +338,57 @@ main {
           align-items: center;
 }
 
-main .list {
+.search_display .search_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 50px 15px 15px 15px;
+}
+
+.search_display .search_title h1 {
+  font-size: 60px;
+  font-family: "Inter", sans-serif;
+}
+
+.search_display .filter_toolbar {
+  width: 100%;
+  padding: 15px;
+}
+
+.search_display .filter_toolbar input[type=text] {
+  border: none;
+  padding: 10px;
+  width: 450px;
+  height: 60px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.search_display .filter_toolbar button {
+  border: none;
+  padding: 10px;
+  background-color: #EB1212;
+  color: #FFFFFF;
+  height: 60px;
+  width: 120px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.search_display .list {
   width: 100%;
   margin-top: 25px;
   display: -ms-grid;
@@ -349,7 +400,7 @@ main .list {
   gap: 10px;
 }
 
-main .list .item {
+.search_display .list .item {
   position: relative;
   -ms-grid-row: 1;
   grid-area: 1fr;
@@ -357,33 +408,33 @@ main .list .item {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-main .list .item .item_title {
+.search_display .list .item .item_title {
   font-size: 15px;
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
-main .list .item .item_description {
-  padding-bottom: 3px;
+.search_display .list .item .item_description {
+  padding-bottom: 8px;
 }
 
-main .list .item .item_description p {
+.search_display .list .item .item_description p {
   font-size: 12px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-main .list .item .item_author {
-  padding-bottom: 3px;
+.search_display .list .item .item_author {
+  padding-bottom: 8px;
 }
 
-main .list .item .item_author p {
-  font-size: 12px;
-  font-weight: 600;
+.search_display .list .item .item_author p {
+  font-size: 10px;
+  font-weight: 800;
   text-transform: capitalize;
 }
 
-main .list .item .item_source {
+.search_display .list .item .item_source {
   padding-bottom: 3px;
   position: absolute;
   z-index: 1;
@@ -391,7 +442,7 @@ main .list .item .item_source {
   left: 20px;
 }
 
-main .list .item .item_source p {
+.search_display .list .item .item_source p {
   font-size: 12px;
   font-weight: 600;
   text-transform: capitalize;
@@ -400,7 +451,7 @@ main .list .item .item_source p {
   text-shadow: 0px 2px 3px #000000;
 }
 
-main .list .item .item_a {
+.search_display .list .item .item_a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +467,7 @@ main .list .item .item_a {
   text-transform: capitalize;
 }
 
-main .list .item img {
+.search_display .list .item img {
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
@@ -425,11 +476,11 @@ main .list .item img {
      object-position: center top;
 }
 
-main .list .item:last-of-type {
+.search_display .list .item:last-of-type {
   border-bottom: none;
 }
 
-main .list .item:hover {
+.search_display .list .item:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -453,11 +504,11 @@ main .list .item:hover {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #44AAEE;
+  background-color: #FFFFFF;
   margin: 5px;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
-  color: #FFF;
+  color: #000000;
   font-size: 18px;
   text-shadow: 0px 0px 4px rgba 0, 0, 0, 0.2;
   -webkit-box-shadow: 0px 0px 4px rgba 0, 0, 0, 0.2;
@@ -465,12 +516,14 @@ main .list .item:hover {
 }
 
 .pagenumbers button:hover {
-  background-color: #44EEAA;
+  background-color: #EB1212;
+  color: #FFFFFF;
 }
 
 .pagenumbers .active {
-  background-color: #44EEAA;
+  background-color: #EB1212;
   -webkit-box-shadow: inset 0px 0px 4px rgba 0, 0, 0, 0.2;
           box-shadow: inset 0px 0px 4px rgba 0, 0, 0, 0.2;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
