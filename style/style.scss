@@ -6,6 +6,7 @@ body {
   background-color: $cream;
 }
 
+// --------------------------------------- nav start 
 .nav {
   @include flex-column;
   width: 100%;
@@ -29,7 +30,7 @@ body {
         .material-symbols-outlined {
           color: $white;
           font-size: 45px;
-          padding-left: 38px;
+          padding-left: 15px;
           cursor: pointer;
 
         }
@@ -137,7 +138,7 @@ body {
             font-size: 15px;
             font-family: $jakarta;
             color: $white;
-            padding: 14px 14px;
+            padding: 14px 15px;
             text-transform: capitalize;
             transition: all ease .3s;
           }
@@ -157,6 +158,8 @@ body {
   }
 }
 
+// --------------------------------------- nav end 
+// --------------------------------------- landingpage start 
 .landingpage {
   height: 100vh;
   position: relative;
@@ -191,15 +194,15 @@ body {
       @include shadow;
 
 
-      .clr_red {
-        color: $red;
-      }
+
     }
   }
 }
 
+// --------------------------------------- landingpage end 
 
 // --------------------------------------- display
+
 .search_display {
   display: flex;
   flex-direction: column;
@@ -214,6 +217,7 @@ body {
     h1 {
       font-size: 60px;
       font-family: $inter;
+      text-transform: capitalize;
     }
   }
 
@@ -232,6 +236,17 @@ body {
       font-weight: 500;
 
 
+    }
+
+    select {
+      border: none;
+      padding: 10px;
+      width: 450px;
+      height: 60px;
+      font-family: $inter;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 500;
     }
 
     button {
@@ -334,7 +349,8 @@ body {
   }
 }
 
-// ------------------------------------- pagination 
+// --------------------------------------- pagination 
+
 .pagenumbers {
   display: flex;
   flex-wrap: wrap;
@@ -372,3 +388,230 @@ body {
     color: white;
   }
 }
+
+// --------------------------------------- pagination end
+
+.aboutpage {
+  // width: 100vw;
+  height: 180vh;
+  background-color: black;
+  color: $white;
+
+  .aboutpage_header {
+    @include flex-row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 50px 15px;
+
+    p {
+      font-family: $inter;
+      padding-left: 20px;
+      font-size: 60px;
+      font-weight: 600;
+      text-transform: capitalize;
+
+    }
+
+    .aboutpage_logo {
+      p {
+        text-transform: uppercase;
+        letter-spacing: -6px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .aboutpage_content {
+    @include flex-column;
+    // align-items: center;
+    // justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .abp_content {
+      margin-bottom: 10px;
+    }
+
+    #content_a {
+      position: relative;
+      height: 500px;
+      width: 100%;
+      background-image: url('../media/protest_bw.jpg');
+      background-position: bottom center;
+      background-size: cover;
+
+
+      .ca_qoute {
+        p {
+          position: absolute;
+          right: 40px;
+          bottom: 80px;
+          font-family: $inter;
+          font-size: 80px;
+          text-align: right;
+          @include shadow;
+        }
+      }
+
+      .ca_line {
+        position: absolute;
+        height: 4px;
+        width: 45vw;
+        left: 0px;
+        bottom: 120px;
+        background-color: $white;
+        box-shadow: 0px 2px 3px #000000;
+        border-radius: 5px;
+      }
+    }
+
+    #content_b {
+      @include flex-row;
+      height: 300px;
+      width: 100%;
+      padding: 20px 0;
+
+      p {
+        width: 60%;
+        font-family: $jakarta;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 50px;
+        padding-right: 20px;
+      }
+
+      img {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    #content_c {
+      @include flex-row;
+      height: 300px;
+      width: 100%;
+      padding: 20px 0;
+
+      p {
+        width: 60%;
+        font-family: $jakarta;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 50px;
+        padding-left: 20px;
+      }
+
+      img {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// --------------------------------------- footer 
+
+.footer {
+  @include flex-row;
+  justify-content: space-between;
+  background-color: $black;
+  width: 100%;
+  height: 40vh;
+  padding-left: 65px;
+
+
+  .ftr_1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 54px;
+    width: auto;
+    padding: 50px;
+
+    a {
+      font-size: 15px;
+      font-family: $jakarta;
+      text-transform: capitalize;
+      color: $white;
+      transition: all ease .3s;
+    }
+
+    a:hover {
+      color: rgb(161, 161, 161);
+
+    }
+  }
+
+  .ftr_2 {
+    @include flex-column;
+    justify-content: center;
+    width: 50%;
+    row-gap: 20px;
+    background-color: $red;
+    padding: 15px 85px 15px 50px;
+
+    p {
+      font-size: 30px;
+      font-family: $jakarta;
+      // text-transform: capitalize;
+      color: $white;
+
+    }
+
+    input {
+      border: none;
+      padding: 10px;
+      width: 100%;
+      height: 60px;
+      font-size: 20px;
+    }
+
+    .button {
+      @include flex-row;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      button {
+        border: none;
+        padding: 15px 25px;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $inter;
+        text-transform: capitalize;
+        background-color: $black;
+        color: $white;
+        transition: all ease .3s;
+      }
+
+      button:hover {
+        background-color: $white;
+        color: black;
+      }
+    }
+  }
+}
+
+// --------------------------------------- footer end
+
+// --------------------------------------- copyright 
+
+.copyright {
+  @include flex-row;
+  justify-content: space-between;
+  padding: 10px 80px;
+  // background-color: black;
+  background-color: rgb(22, 25, 84);
+
+  p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: $jakarta;
+    text-transform: capitalize;
+    color: $white;
+  }
+}
+
+// --------------------------------------- copyright end

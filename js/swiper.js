@@ -25,7 +25,7 @@ let swiperApi = (item) => {
     // }
     let dispalaySwiper = (item) => {
         swiperWraper.innerHTML += `
-        <div class="swiper-slide" id="swiper_item">
+        <div class="swiper-slide">
             <img src="${item.urlToImage}" alt="landingpage.png">
         <h6>trending Now</h6>
         <p>${item.title}</p>
@@ -35,28 +35,34 @@ let swiperApi = (item) => {
 
     item.forEach(dispalaySwiper);
 
+    // --------------------------------- swiper
+
+
+    let swiper = new Swiper(".mySwiper", {
+        // spaceBetween: 30,
+        centeredSlides: true,
+        speed: 2000,
+        // loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+
 }
 
-// --------------------------------- swiper
-let swiper = new Swiper(".mySwiper", {
-    // spaceBetween: 30,
-    centeredSlides: true,
-    speed: 2000,
-    // loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+
+
 
 // swiper 
 $.ajax({
     type: "GET",
-    url: endpointURLSwiper + parametersSwiper + "people" + "&page=1" + "&pageSize=8" + pageSizeSwiper + apiKeySwiper,
+    url: endpointURLSwiper + parametersSwiper + "fire" + "&page=1" + "&pageSize=8" + pageSizeSwiper + apiKeySwiper,
     success: (data) => {
         // console.log(data);
         // push API data into these functions 

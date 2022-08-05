@@ -1,19 +1,23 @@
-
+// aos 
+AOS.init();
 // --------------------------------------------API variables 
 const apiKey = "&apiKey=1423e6422183485b87593f339a8afa9e";
-const endpointURL = "https://newsapi.org/v2/everything?";
-const parameters = "q=";
+const endpointURL = "https://newsapi.org/v2/";
+const everything = "everything?"
+const topHeadline = "top-headlines?"
+const query = "q=";
 const sources = "sources=";
 const domains = "domains=";
-const topHeadline = "top-headlines?"
-const pageSize = "&pageSize=60";
+const pageSize = "&pageSize=40";
 const page = "&page=1"
+const language = "&language=en";
+const sortBy = "&sortBy=";
 // ---------------------------------------------- variables
 const list_element = document.getElementById('list');
-const pagination_element = document.getElementById('pagination')
-const searchInput = document.getElementById('search');
-const searchBtn = document.getElementById('button')
-
+const pagination_element = document.getElementById('pagination');
+const searchInput = document.getElementById('search-input');
+const sortByInput = document.getElementById('sort-by');
+const searchBtn = document.getElementById('button');
 // --------------------this shows items displayed per page. 
 // the page 
 let current_page = 1;
@@ -28,7 +32,7 @@ function DisplayList(items, wrapper, rows_per_page, page) {
     // page = current_page 
     wrapper.innerHTML = "";
     page--;
-    console.log(items);
+    // console.log(items);
 
     // this math equation calculates amount of listed objects and rounds up. 
 
@@ -38,10 +42,12 @@ function DisplayList(items, wrapper, rows_per_page, page) {
 
     // this is renders the array data and styles 
     for (let i = 0; i < paginatedItems.length; i++) {
+
         let item = paginatedItems[i];
         // this creates the div.item and fills it with item_element 
         let item_element = document.createElement('div');
         item_element.classList.add('item');
+
         // this will loop through array to find nulls and not display the authors 
         authorNull = () => {
             if (item.author == null) {
@@ -53,16 +59,17 @@ function DisplayList(items, wrapper, rows_per_page, page) {
 
         truncateString = (item, num) => {
             let shortDescription = item.description;
-            if (shortDescription.length > 110) {
+            if (shortDescription.length > num) {
                 return shortDescription.slice(0, num) + "...";
             } else {
                 return shortDescription;
             }
         }
-
+        // --------------- 
         // display all info
-        item_element.innerHTML = `
-                <img src="${item.urlToImage}" alt="peopleontraing.jpg">
+
+        item_element.innerHTML += `
+        <img src="${item.urlToImage}" alt="peopleontraing.jpg">
                 <div class="item_title">
                     <p>${item.title}</p>
                  </div>
@@ -124,7 +131,7 @@ function paginationButton(page, items) {
 // --------------------------------------------------- API Ajax 
 $.ajax({
     type: "GET",
-    url: endpointURL + parameters + "trending" + page + pageSize + apiKey,
+    url: endpointURL + everything + query + "fire" + page + pageSize + language + apiKey,
     success: (data) => {
         // console.log(data);
         // push API data into these functions 
@@ -141,13 +148,14 @@ $.ajax({
 // this is for search functionality
 searchBtn.onclick = () => {
     console.log('search clicked');
-    searchString = searchInput.value;
-
+    let searchString = searchInput.value;
+    let filterString = sortByInput.value
     $.ajax({
         type: "GET",
-        url: endpointURL + parameters + searchString + page + pageSize + apiKey,
+        url: endpointURL + everything + query + searchString + sortBy + filterString + page + pageSize + language + apiKey,
         success: (data) => {
-            // console.log(data);
+            console.log(data);
+
             // push API data into these functions 
             DisplayList(data.articles, list_element, rows, current_page);
             setupPagination(data.articles, pagination_element, rows);

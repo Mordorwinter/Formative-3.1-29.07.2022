@@ -17,6 +17,14 @@
   padding: 65px;
 }
 
+.wrapper_3 {
+  padding: 15px;
+}
+
+.clr_red {
+  color: #EB1212;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -136,7 +144,7 @@ body {
 .nav .nav_main .nav_main_left .nav_main_menu .material-symbols-outlined {
   color: #FFFFFF;
   font-size: 45px;
-  padding-left: 38px;
+  padding-left: 15px;
   cursor: pointer;
 }
 
@@ -265,7 +273,7 @@ body {
   font-size: 15px;
   font-family: "Plus Jakarta Sans", sans-serif;
   color: #FFFFFF;
-  padding: 14px 14px;
+  padding: 14px 15px;
   text-transform: capitalize;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
@@ -291,6 +299,7 @@ body {
   bottom: 200px;
   left: 0;
   border-radius: 1px;
+  text-shadow: 0px 2px 3px #000000;
   text-shadow: 0px 2px 3px #000000;
   text-shadow: 0px 2px 3px #000000;
 }
@@ -319,10 +328,7 @@ body {
   letter-spacing: -4px;
   text-shadow: 0px 2px 3px #000000;
   text-shadow: 0px 2px 3px #000000;
-}
-
-.landingpage .landingpage_logo p .clr_red {
-  color: #EB1212;
+  text-shadow: 0px 2px 3px #000000;
 }
 
 .search_display {
@@ -356,6 +362,7 @@ body {
 .search_display .search_title h1 {
   font-size: 60px;
   font-family: "Inter", sans-serif;
+  text-transform: capitalize;
 }
 
 .search_display .filter_toolbar {
@@ -364,6 +371,17 @@ body {
 }
 
 .search_display .filter_toolbar input[type=text] {
+  border: none;
+  padding: 10px;
+  width: 450px;
+  height: 60px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.search_display .filter_toolbar select {
   border: none;
   padding: 10px;
   width: 450px;
@@ -449,6 +467,7 @@ body {
   color: #FFFFFF;
   text-shadow: 0px 2px 3px #000000;
   text-shadow: 0px 2px 3px #000000;
+  text-shadow: 0px 2px 3px #000000;
 }
 
 .search_display .list .item .item_a {
@@ -525,5 +544,279 @@ body {
   -webkit-box-shadow: inset 0px 0px 4px rgba 0, 0, 0, 0.2;
           box-shadow: inset 0px 0px 4px rgba 0, 0, 0, 0.2;
   color: white;
+}
+
+.aboutpage {
+  height: 180vh;
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.aboutpage .aboutpage_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 50px 15px;
+}
+
+.aboutpage .aboutpage_header p {
+  font-family: "Inter", sans-serif;
+  padding-left: 20px;
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.aboutpage .aboutpage_header .aboutpage_logo p {
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  font-weight: 800;
+}
+
+.aboutpage .aboutpage_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutpage .aboutpage_content .abp_content {
+  margin-bottom: 10px;
+}
+
+.aboutpage .aboutpage_content #content_a {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-image: url("../media/protest_bw.jpg");
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.aboutpage .aboutpage_content #content_a .ca_qoute p {
+  position: absolute;
+  right: 40px;
+  bottom: 80px;
+  font-family: "Inter", sans-serif;
+  font-size: 80px;
+  text-align: right;
+  text-shadow: 0px 2px 3px #000000;
+  text-shadow: 0px 2px 3px #000000;
+  text-shadow: 0px 2px 3px #000000;
+}
+
+.aboutpage .aboutpage_content #content_a .ca_line {
+  position: absolute;
+  height: 4px;
+  width: 45vw;
+  left: 0px;
+  bottom: 120px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 3px #000000;
+          box-shadow: 0px 2px 3px #000000;
+  border-radius: 5px;
+}
+
+.aboutpage .aboutpage_content #content_b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 300px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.aboutpage .aboutpage_content #content_b p {
+  width: 60%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 50px;
+  padding-right: 20px;
+}
+
+.aboutpage .aboutpage_content #content_b img {
+  width: 40%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.aboutpage .aboutpage_content #content_c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 300px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.aboutpage .aboutpage_content #content_c p {
+  width: 60%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+.aboutpage .aboutpage_content #content_c img {
+  width: 40%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #000000;
+  width: 100%;
+  height: 40vh;
+  padding-left: 65px;
+}
+
+.footer .ftr_1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 54px;
+          column-gap: 54px;
+  width: auto;
+  padding: 50px;
+}
+
+.footer .ftr_1 a {
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.footer .ftr_1 a:hover {
+  color: #a1a1a1;
+}
+
+.footer .ftr_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  row-gap: 20px;
+  background-color: #EB1212;
+  padding: 15px 85px 15px 50px;
+}
+
+.footer .ftr_2 p {
+  font-size: 30px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #FFFFFF;
+}
+
+.footer .ftr_2 input {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+}
+
+.footer .ftr_2 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer .ftr_2 .button button {
+  border: none;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-transform: capitalize;
+  background-color: #000000;
+  color: #FFFFFF;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.footer .ftr_2 .button button:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 80px;
+  background-color: #161954;
+}
+
+.copyright p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-transform: capitalize;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

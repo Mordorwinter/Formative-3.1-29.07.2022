@@ -10,6 +10,10 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- swiper css  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- aos  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- native style  -->
     <link rel="stylesheet" href="style/style.css">
     <title>31.07 API Pagination</title>
@@ -37,7 +41,7 @@
             </div>
             <div class="nav_main_links">
                 <ul>
-                    <li><a href="#">about</a></li>
+                    <li><a href="#aboutpage">about</a></li>
                     <li><a href="#search">search</a></li>
                     <li><a href="#">subscribe</a></li>
                     <li><a href="#">login</a></li>
@@ -87,14 +91,20 @@
 
     </section>
     <!-- landing page end  -->
-
+    <!-- sear display start  -->
     <main class="search_display wrapper_2" id="search">
         <div class="search_title">
             <h1>search for news</h1>
         </div>
         <div id="filter-toolbar" class="filter_toolbar">
-            <input type="text" placeholder="search" name="search" id="search" class="search">
+            <input type="text" placeholder="search" name="search" id="search-input" class="search">
+            <select name="sort-by" id="sort-by" class="sort-by">
+                <option value="relevancy">relevant</option>
+                <option value="popularity">popular</option>
+                <option value="publishedAt">newest</option>
+            </select>
             <button id="button">search</button>
+
         </div>
 
         <div id="list" class="list">
@@ -105,14 +115,86 @@
         </div>
 
     </main>
+    <!-- search display end  -->
+    <!-- about page start  -->
+    <section class="aboutpage wrapper_1" id="aboutpage">
+        <div class="aboutpage_header">
+            <p>about</p>
+            <div class="aboutpage_logo">
+                <p><span class="clr_red">Nws</span>Now</p>
+            </div>
+        </div>
+        <div class="aboutpage_content">
+
+            <div class="abp_content" id="content_a">
+                <div class="ca_qoute">
+                    <p>“Lorem ipsum dolor sit <br> amet, consectetur” <br> Adipiscing Elit.</p>
+                </div>
+                <div class="ca_line"></div>
+            </div>
+            <div class="abp_content" id="content_b" data-aos="fade-up" data-aos-duration="3000">
+                <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <img src="media/bots_with_water.jpg" alt="img.png">
+            </div>
+            <div class="abp_content" id="content_c" data-aos="fade-up" data-aos-duration="3000">
+                <img src="media/traffic_cross.jpg" alt="img.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Sit amet consectetur adipiscing elit pellentesque. Egestas integer eget
+                    aliquet nibh praesent. At tempor commodo ullamcorper a lacus vestibulum sed.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- about page start -->
+    <!-- footer start -->
+    <footer class="footer">
+
+        <div class="ftr_1 wrapper_3">
+            <a href="#">world</a>
+            <a href="#">buisness</a>
+            <a href="#">economics</a>
+            <a href="#">science</a>
+
+            <a href="#">technology</a>
+            <a href="#">art</a>
+            <a href="#">environment</a>
+            <a href="#">more</a>
+
+            <a href="#">policy</a>
+            <a href="#">terms and conditions</a>
+            <a href="#">blogs</a>
+            <a href="#">careers</a>
+        </div>
+        <div class="ftr_2 ">
+            <p>Subscribe to our newsletter.</p>
+            <input type="email" name="email" id="email" placeholder="email">
+            <div class="button">
+                <button>subscribe</button>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        <p>all rights reserved to NWSNOW</p>
+        <p>created by joji ratuva</p>
+    </div>
+    <!-- footer end  -->
 
     <!-- ------------script------------  -->
-
+    <!-- aos jquery  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- swiper js  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- aos script  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <!-- local  -->
     <script src="js/swiper.js"></script>
