@@ -1,0 +1,260 @@
+//----------------------- aboutpage start
+
+.aboutpage {
+    // width: 100vw;
+    height: 180vh;
+    background-color: black;
+    color: $white;
+
+    .aboutpage_header {
+        @include flex-row;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 50px 15px;
+
+        p {
+            font-family: $inter;
+            padding-left: 20px;
+            font-size: 60px;
+            font-weight: 600;
+            text-transform: capitalize;
+
+        }
+
+        .aboutpage_logo {
+            p {
+                text-transform: uppercase;
+                letter-spacing: -6px;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .aboutpage_content {
+        @include flex-column;
+        // align-items: center;
+        // justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .abp_content {
+            margin-bottom: 10px;
+        }
+
+        #content_a {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            background-image: url('../media/protest_bw.jpg');
+            background-position: bottom center;
+            background-size: cover;
+
+
+            .ca_qoute {
+                p {
+                    position: absolute;
+                    right: 40px;
+                    bottom: 80px;
+                    font-family: $inter;
+                    font-size: 80px;
+                    text-align: right;
+                    @include shadow;
+                }
+            }
+
+            .ca_line {
+                position: absolute;
+                height: 5px;
+                width: 45%;
+                left: 0px;
+                bottom: 120px;
+                background-color: $white;
+                box-shadow: 0px 2px 3px #000000;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+            }
+        }
+
+        #content_b {
+            @include flex-row;
+            height: 300px;
+            width: 100%;
+            padding: 20px 0;
+
+            p {
+                width: 60%;
+                font-family: $jakarta;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 50px;
+                padding-right: 20px;
+            }
+
+            img {
+                width: 40%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        #content_c {
+            @include flex-row;
+            height: 300px;
+            width: 100%;
+            padding: 20px 0;
+
+            p {
+                width: 60%;
+                font-family: $jakarta;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 50px;
+                padding-left: 20px;
+            }
+
+            img {
+                width: 40%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+//----------------------- aboutpage end 
+
+//----------------------- media screen desktop 1200px  start 
+@media only screen and (max-width: 1200px) {
+    .aboutpage {
+        .aboutpage_content {
+            #content_a {
+
+                .ca_qoute {
+                    p {
+                        font-size: 80px;
+                    }
+                }
+
+                .ca_line {
+                    width: 40%;
+                }
+            }
+
+            #content_b {
+
+                p {
+                    font-size: 22px;
+                }
+            }
+
+            #content_c {
+
+                p {
+                    font-size: 22px;
+                }
+
+            }
+        }
+    }
+}
+
+//----------------------- media screen desktop 1200px end
+//----------------------- media screen tablet 900px  start 
+@media only screen and (max-width: 900px) {
+    .aboutpage {
+        .aboutpage_content {
+            #content_a {
+
+                .ca_qoute {
+                    p {
+                        font-size: 65px;
+                    }
+                }
+
+                .ca_line {
+                    width: 40%;
+                }
+            }
+
+            #content_b {
+
+                p {
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+            }
+
+            #content_c {
+
+                p {
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+
+            }
+        }
+    }
+
+}
+
+//----------------------- media screen tablet 900px end
+//----------------------- media screen mobile 500px  start 
+@media only screen and (max-width: 500px) {
+    .aboutpage {
+        height: 220vh;
+        @include flex-column;
+        justify-content: space-between;
+
+        .aboutpage_content {
+            #content_a {
+
+                .ca_qoute {
+                    p {
+                        font-size: 45px;
+                    }
+                }
+
+                .ca_line {
+                    width: 20%;
+                }
+            }
+
+            #content_b {
+                @include flex-column;
+                width: 100%;
+                margin-bottom: 50px;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                    padding: 0;
+                }
+            }
+
+            #content_c {
+                @include flex-column;
+
+
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    padding: 0;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+            }
+        }
+    }
+
+}
+
+//----------------------- media screen mobile 500px end

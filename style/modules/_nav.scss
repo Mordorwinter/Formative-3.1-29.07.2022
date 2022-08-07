@@ -1,0 +1,461 @@
+// --------------------------------------- nav start 
+.nav {
+    @include flex-column;
+    width: 100%;
+    position: fixed;
+    z-index: 89;
+
+    .nav_main {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $red;
+
+
+        .nav_main_left {
+            @include flex-row;
+            align-items: center;
+            justify-content: space-between;
+            width: 43%;
+
+            .nav_main_menu {
+                .material-symbols-outlined {
+                    color: $white;
+                    font-size: 45px;
+                    padding-left: 15px;
+                    cursor: pointer;
+
+                }
+
+
+            }
+
+            .nav_main_logo {
+                background-color: black;
+                padding: 10px 25px;
+
+                a {
+                    p {
+                        font-family: $inter;
+                        color: white;
+                        font-size: 25px;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        letter-spacing: -3px;
+
+                        .clr_red {
+                            color: $red;
+                        }
+                    }
+
+                }
+            }
+
+            .nav_main_items {
+                ul {
+                    @include flex-row;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            font-family: $jakarta;
+                            font-size: 14px;
+                            color: $white;
+                            padding: 16px;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav_main_links {
+            width: 57%;
+
+            ul {
+                @include flex-row;
+                justify-content: flex-end;
+                width: 100%;
+
+                li {
+                    list-style: none;
+
+
+                    a {
+                        font-family: $inter;
+                        color: $white;
+                        padding: 16px 40px;
+                        font-weight: 600;
+                        // background-color: blue;
+                        text-transform: capitalize;
+                        transition: all ease .6s;
+                    }
+
+                    a:hover {
+                        color: $white;
+                        background-color: black;
+                    }
+
+                }
+            }
+
+
+        }
+
+    }
+
+    .nav_secondary {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        height: 50px;
+
+        .nav_secondary_links {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                @include flex-row;
+                justify-content: space-between;
+                align-items: center;
+
+                li {
+                    list-style: none;
+
+
+                    a {
+                        font-size: 15px;
+                        font-family: $jakarta;
+                        color: $white;
+                        padding: 14px 15px;
+                        text-transform: capitalize;
+                        transition: all ease .3s;
+                    }
+
+                    a:hover {
+                        // background-color: white;
+                        color: rgb(161, 161, 161);
+                        font-weight: 800;
+                        font-size: 17px;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+.nav_responsive {
+    display: none;
+
+}
+
+// --------------------------------------- nav end 
+
+//----------------------- media screen desktop 1200px  start 
+@media only screen and (max-width: 1200px) {
+    .nav {
+
+        .nav_main {
+
+            .nav_main_left {
+
+                .nav_main_menu {
+                    .material-symbols-outlined {
+                        font-size: 35px;
+
+                    }
+
+
+                }
+
+                .nav_main_logo {
+
+                    a {
+                        p {
+                            font-size: 23px;
+                        }
+
+                    }
+                }
+
+                .nav_main_items {
+                    ul {
+                        li {
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav_main_links {
+                ul {
+                    li {
+                        a {
+                            font-size: 15px;
+                            padding: 16px 25px;
+
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        .nav_secondary {
+            .nav_secondary_links {
+                ul {
+                    li {
+                        a {
+                            font-size: 15px;
+                            padding: 15px 30px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+//----------------------- media screen desktop 1200px end
+//----------------------- media screen tablet 900px  start 
+@media only screen and (max-width: 900px) {
+    .nav_responsive {
+        position: fixed;
+        top: 48px;
+        z-index: 90;
+        @include flex-row;
+        width: 100%;
+        display: none;
+
+        .nav_main_links_responsive {
+            width: 35%;
+            background-color: $red;
+
+            ul {
+                width: 100%;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        font-family: $jakarta;
+                        display: block;
+                        font-size: 20px;
+                        color: $white;
+                        font-weight: 500;
+                        padding: 22px 30px;
+                        text-transform: capitalize;
+                    }
+
+                    a:hover {
+                        background-color: $white;
+                        color: $black;
+                    }
+                }
+
+            }
+        }
+
+        .nav_secondary_links_responsive {
+            width: 65%;
+            background-color: $black;
+
+            ul {
+                width: 100%;
+
+                li {
+                    list-style: none;
+
+
+                    a {
+                        display: block;
+                        font-family: $jakarta;
+                        font-size: 20px;
+                        color: $white;
+                        font-weight: 500;
+                        padding: 2.125px 30px;
+                        transition: all ease .3s;
+                        text-align: right;
+                        text-transform: capitalize;
+                    }
+
+                    a:hover {
+                        background-color: $white;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav_responsive.active {
+        display: flex;
+    }
+
+    .nav {
+
+        .nav_main {
+            background-color: black;
+
+            .nav_main_left {
+                width: 100%;
+
+                .nav_main_menu {
+                    .material-symbols-outlined {
+                        font-size: 35px;
+
+                    }
+
+
+                }
+
+                .nav_main_logo {
+
+                    a {
+                        p {
+                            font-size: 23px;
+                        }
+
+                    }
+                }
+
+                .nav_main_items {
+                    ul {
+                        li {
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav_main_links {
+                display: none;
+
+                ul {
+                    li {
+                        a {
+                            font-size: 15px;
+                            padding: 16px 25px;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        .nav_secondary {
+            display: none;
+
+            .nav_secondary_links {
+                ul {
+                    li {
+                        a {
+                            font-size: 15px;
+                            padding: 15px 30px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
+
+//----------------------- media screen tablet 900px end
+//----------------------- media screen mobile 500px  start 
+@media only screen and (max-width: 500px) {
+    .nav_responsive {
+        .nav_main_links_responsive {
+
+            ul {
+
+                li {
+
+                    a {
+                        font-size: 18px;
+                    }
+
+                }
+
+            }
+        }
+
+        .nav_secondary_links_responsive {
+
+            ul {
+
+                li {
+
+
+                    a {
+                        font-size: 18px;
+                        padding: 3.51px 30px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .nav {
+
+        .nav_main {
+            background-color: black;
+
+            .nav_main_left {
+                width: 100%;
+
+                .nav_main_menu {
+                    .material-symbols-outlined {
+                        font-size: 35px;
+
+                    }
+
+
+                }
+
+                .nav_main_logo {
+
+                    a {
+                        p {
+                            font-size: 23px;
+                        }
+
+                    }
+                }
+
+                .nav_main_items {
+                    ul {
+                        li {
+                            a {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//----------------------- media screen mobile 500px end

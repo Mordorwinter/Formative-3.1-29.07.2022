@@ -65,3 +65,23 @@ $cream: #EDEBE0;
 .clr_red {
     color: $red;
 }
+
+@media only screen and (max-width: 900px) {
+    .wrapper_1 {
+        padding: 0px 20px;
+    }
+
+    .wrapper_2 {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .wrapper_1 {
+        padding: 0px 20px;
+    }
+
+    .wrapper_2 {
+        padding: 20px;
+    }
+}
