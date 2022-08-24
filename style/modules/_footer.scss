@@ -113,6 +113,83 @@
 
 //----------------------- media screen tablet 900px end
 //----------------------- media screen mobile 500px  start 
-@media only screen and (max-width: 500px) {}
+@media only screen and (max-width: 500px) {
+    .footer {
+        @include flex-column;
+        justify-content: space-between;
+        background-color: $green;
+
+
+        .ftr_1 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            row-gap: 54px;
+            width: auto;
+            padding: 20px;
+
+            a {
+                font-size: 15px;
+                font-family: $jakarta;
+                text-transform: capitalize;
+                color: $white;
+                transition: all ease .3s;
+            }
+
+            a:hover {
+                color: rgb(161, 161, 161);
+
+            }
+        }
+
+        .ftr_2 {
+            @include flex-column;
+            justify-content: center;
+            width: 50%;
+            row-gap: 20px;
+            background-color: $black;
+            padding: 15px 85px 15px 50px;
+
+            p {
+                font-size: 30px;
+                font-family: $jakarta;
+                // text-transform: capitalize;
+                color: $white;
+
+            }
+
+            input {
+                border: none;
+                padding: 10px;
+                width: 100%;
+                height: 60px;
+                font-size: 20px;
+            }
+
+            .button {
+                @include flex-row;
+                align-items: flex-end;
+                justify-content: flex-end;
+
+                button {
+                    border: none;
+                    padding: 15px 25px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-family: $inter;
+                    text-transform: capitalize;
+                    background-color: $black;
+                    color: $white;
+                    transition: all ease .3s;
+                }
+
+                button:hover {
+                    background-color: $white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
 
 //----------------------- media screen mobile 500px end

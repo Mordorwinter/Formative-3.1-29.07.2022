@@ -79,7 +79,7 @@
             @include flex-row;
             height: 300px;
             width: 100%;
-            padding: 20px 0;
+            padding: 60px 0;
 
             p {
                 width: 60%;
@@ -201,11 +201,11 @@
 //----------------------- media screen mobile 500px  start 
 @media only screen and (max-width: 500px) {
     .aboutpage {
-        height: 220vh;
-        @include flex-column;
-        justify-content: space-between;
+        height: 300vh;
+        max-height: 250vh;
 
         .aboutpage_content {
+
             #content_a {
 
                 .ca_qoute {
@@ -216,28 +216,31 @@
 
                 .ca_line {
                     width: 20%;
+                    bottom: 100px;
                 }
             }
 
             #content_b {
+                height: 600px;
                 @include flex-column;
                 width: 100%;
-                margin-bottom: 50px;
+                padding: 20px 0;
 
                 img {
                     width: 100%;
                 }
 
                 p {
-                    font-size: 12px;
-                    line-height: 20px;
-                    padding: 0;
+                    font-size: 20px;
+                    line-height: 30px;
+                    width: 100%;
+
                 }
             }
 
             #content_c {
                 @include flex-column;
-
+                height: 600px;
 
                 width: 100%;
 
@@ -247,8 +250,9 @@
 
                 p {
                     padding: 0;
-                    font-size: 12px;
-                    line-height: 20px;
+                    font-size: 20px;
+                    line-height: 30px;
+                    width: 100%;
                 }
 
             }

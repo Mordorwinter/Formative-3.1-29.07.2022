@@ -1,7 +1,7 @@
 // aos 
 AOS.init();
 // --------------------------------------------API variables 
-const apiKey = "&apiKey=1423e6422183485b87593f339a8afa9e";
+const apiKey = "&apiKey=0ee0b450932f4ce982f3e07f61a8ba3c";
 const endpointURL = "https://newsapi.org/v2/";
 const everything = "everything?"
 const topHeadline = "top-headlines?"
